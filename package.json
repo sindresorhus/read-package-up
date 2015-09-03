@@ -1,6 +1,6 @@
 {
   "name": "read-pkg-up",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Read the closest package.json file",
   "license": "MIT",
   "repository": "sindresorhus/read-pkg-up",
