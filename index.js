@@ -2,13 +2,8 @@
 var findUp = require('find-up');
 var readPkg = require('read-pkg');
 
-module.exports = function (cwd, opts) {
-	if (typeof cwd !== 'string') {
-		opts = cwd;
-		cwd = '.';
-	}
-
-	return findUp('package.json', {cwd: cwd}).then(function (fp) {
+module.exports = function (opts) {
+	return findUp('package.json', opts).then(function (fp) {
 		if (!fp) {
 			return {};
 		}
@@ -22,13 +17,8 @@ module.exports = function (cwd, opts) {
 	});
 };
 
-module.exports.sync = function (cwd, opts) {
-	if (typeof cwd !== 'string') {
-		opts = cwd;
-		cwd = '.';
-	}
-
-	var fp = findUp.sync('package.json', {cwd: cwd});
+module.exports.sync = function (opts) {
+	var fp = findUp.sync('package.json', opts);
 
 	if (!fp) {
 		return {};

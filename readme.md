@@ -42,22 +42,22 @@ readPkgUp().then(function (result) {
 
 ## API
 
-### readPkgUp([cwd], [options])
+### readPkgUp([options])
 
 Returns a promise that resolves to a result object.
 
-### readPkgUp.sync([cwd], [options])
+### readPkgUp.sync([options])
 
 Returns a result object.
 
-#### cwd
+#### options
+
+##### cwd
 
 Type: `string`  
 Default: `.`
 
 Directory to start looking for a package.json file.
-
-#### options
 
 ##### normalize
 
