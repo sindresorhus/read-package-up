@@ -33,7 +33,7 @@ readPkgUp().then(function (result) {
 			version: '1.0.0',
 			...
 		},
-		path: '/Users/sindresorhus/dev/awesome-package'
+		path: '/Users/sindresorhus/dev/awesome-package/package.json'
 	}
 	*/
 });
