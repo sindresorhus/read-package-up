@@ -70,6 +70,7 @@ Default: `true`
 ## Related
 
 - [read-pkg](https://github.com/sindresorhus/read-pkg) - Read a package.json file
+- [pkg-up](https://github.com/sindresorhus/pkg-up) - Find the closest package.json file
 - [find-up](https://github.com/sindresorhus/find-up) - Find a file by walking up parent directories
 - [pkg-conf](https://github.com/sindresorhus/pkg-conf) - Get namespaced config from the closest package.json
 
