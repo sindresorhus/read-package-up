@@ -22,9 +22,9 @@ $ npm install --save read-pkg-up
 ## Usage
 
 ```js
-var readPkgUp = require('read-pkg-up');
+const readPkgUp = require('read-pkg-up');
 
-readPkgUp().then(function (result) {
+readPkgUp().then(result => {
 	console.log(result);
 	/*
 	{
@@ -54,14 +54,14 @@ Returns a result object.
 
 ##### cwd
 
-Type: `string`  
+Type: `string`
 Default: `.`
 
 Directory to start looking for a package.json file.
 
 ##### normalize
 
-Type: `boolean`  
+Type: `boolean`
 Default: `true`
 
 [Normalize](https://github.com/npm/normalize-package-data#what-normalization-currently-entails) the package data.
