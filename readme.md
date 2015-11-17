@@ -44,7 +44,7 @@ readPkgUp().then(result => {
 
 ### readPkgUp([options])
 
-Returns a promise that resolves to a result object.
+Returns a promise for the result object.
 
 ### readPkgUp.sync([options])
 
@@ -54,14 +54,14 @@ Returns a result object.
 
 ##### cwd
 
-Type: `string`
+Type: `string`  
 Default: `.`
 
 Directory to start looking for a package.json file.
 
 ##### normalize
 
-Type: `boolean`
+Type: `boolean`  
 Default: `true`
 
 [Normalize](https://github.com/npm/normalize-package-data#what-normalization-currently-entails) the package data.
