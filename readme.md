@@ -22,9 +22,9 @@ $ npm install --save read-pkg-up
 ## Usage
 
 ```js
-var readPkgUp = require('read-pkg-up');
+const readPkgUp = require('read-pkg-up');
 
-readPkgUp().then(function (result) {
+readPkgUp().then(result => {
 	console.log(result);
 	/*
 	{
@@ -44,7 +44,7 @@ readPkgUp().then(function (result) {
 
 ### readPkgUp([options])
 
-Returns a promise that resolves to a result object.
+Returns a promise for the result object.
 
 ### readPkgUp.sync([options])
 
