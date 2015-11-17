@@ -2,8 +2,8 @@ import test from 'ava';
 import path from 'path';
 import fn from './';
 
-const cwd = path.join(__dirname, 'fixture');
-const pkgPath = path.join(__dirname, 'package.json');
+const cwd = 'fixture';
+const pkgPath = path.resolve('.', 'package.json');
 
 test('async', async t => {
 	const x = await fn({cwd});
