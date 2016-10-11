@@ -1,18 +1,18 @@
-import test from 'ava';
 import path from 'path';
-import fn from './';
+import test from 'ava';
+import m from './';
 
 const cwd = 'fixture';
 const pkgPath = path.resolve('.', 'package.json');
 
 test('async', async t => {
-	const x = await fn({cwd});
+	const x = await m({cwd});
 	t.is(x.pkg.name, 'read-pkg-up');
 	t.is(x.path, pkgPath);
 });
 
 test('sync', t => {
-	const x = fn.sync({cwd});
+	const x = m.sync({cwd});
 	t.is(x.pkg.name, 'read-pkg-up');
 	t.is(x.path, pkgPath);
 });
