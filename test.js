@@ -1,6 +1,6 @@
 import path from 'path';
 import test from 'ava';
-import m from './';
+import m from '.';
 
 const cwd = 'fixture';
 const pkgPath = path.resolve('.', 'package.json');

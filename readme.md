@@ -55,7 +55,7 @@ Returns the result object.
 ##### cwd
 
 Type: `string`<br>
-Default: `.`
+Default: `process.cwd()`
 
 Directory to start looking for a package.json file.
 

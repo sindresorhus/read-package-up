@@ -34,10 +34,8 @@
     "findup",
     "look-up",
     "look",
-    "file",
     "search",
     "match",
-    "package",
     "resolve",
     "parent",
     "parents",
@@ -55,8 +53,5 @@
   "devDependencies": {
     "ava": "*",
     "xo": "*"
-  },
-  "xo": {
-    "esnext": true
   }
 }
