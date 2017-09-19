@@ -9,7 +9,7 @@ declare module 'read-pkg-up' {
     /**
      * Directory to start looking for a package.json file.
      *
-     * @default '.'
+     * @default 'process.cwd()'
      */
     cwd?: string;
     /**
