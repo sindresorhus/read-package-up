@@ -15,7 +15,7 @@
 ## Install
 
 ```
-$ npm install --save read-pkg-up
+$ npm install read-pkg-up
 ```
 
 
@@ -31,7 +31,7 @@ readPkgUp().then(result => {
 		pkg: {
 			name: 'awesome-package',
 			version: '1.0.0',
-			...
+			…
 		},
 		path: '/Users/sindresorhus/dev/awesome-package/package.json'
 	}
