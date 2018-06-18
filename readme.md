@@ -24,8 +24,8 @@ $ npm install read-pkg-up
 ```js
 const readPkgUp = require('read-pkg-up');
 
-readPkgUp().then(result => {
-	console.log(result);
+(async () => {
+	console.log(await readPkgUp());
 	/*
 	{
 		pkg: {
@@ -36,7 +36,7 @@ readPkgUp().then(result => {
 		path: '/Users/sindresorhus/dev/awesome-package/package.json'
 	}
 	*/
-});
+})();
 ```
 
 
@@ -51,6 +51,8 @@ Returns a `Promise` for the result object.
 Returns the result object.
 
 #### options
+
+Type: `Object`
 
 ##### cwd
 
