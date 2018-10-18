@@ -15,7 +15,7 @@
 ## Install
 
 ```
-$ npm install --save read-pkg-up
+$ npm install read-pkg-up
 ```
 
 
@@ -24,19 +24,19 @@ $ npm install --save read-pkg-up
 ```js
 const readPkgUp = require('read-pkg-up');
 
-readPkgUp().then(result => {
-	console.log(result);
+(async () => {
+	console.log(await readPkgUp());
 	/*
 	{
 		pkg: {
 			name: 'awesome-package',
 			version: '1.0.0',
-			...
+			…
 		},
 		path: '/Users/sindresorhus/dev/awesome-package/package.json'
 	}
 	*/
-});
+})();
 ```
 
 
@@ -51,6 +51,8 @@ Returns a `Promise` for the result object.
 Returns the result object.
 
 #### options
+
+Type: `Object`
 
 ##### cwd
 
