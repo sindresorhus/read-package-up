@@ -2,25 +2,25 @@
 const findUp = require('find-up');
 const readPkg = require('read-pkg');
 
-module.exports = opts => {
-	return findUp('package.json', opts).then(fp => {
+module.exports = options => {
+	return findUp('package.json', options).then(fp => {
 		if (!fp) {
 			return {};
 		}
 
-		return readPkg(fp, opts).then(pkg => ({pkg, path: fp}));
+		return readPkg(fp, options).then(pkg => ({pkg, path: fp}));
 	});
 };
 
-module.exports.sync = opts => {
-	const fp = findUp.sync('package.json', opts);
+module.exports.sync = options => {
+	const fp = findUp.sync('package.json', options);
 
 	if (!fp) {
 		return {};
 	}
 
 	return {
-		pkg: readPkg.sync(fp, opts),
+		pkg: readPkg.sync(fp, options),
 		path: fp
 	};
 };
