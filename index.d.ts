@@ -1,15 +1,15 @@
-import { IOptions as IFindUpOptions } from 'find-up';
-import { IOptions as IReadPkgOptions, IPackage } from 'read-pkg';
-export { IPackage } from 'read-pkg';
+import {Options as FindUpOptions} from 'find-up';
+import {Options as ReadPkgOptions, PackageMetadata} from 'read-pkg';
+export {PackageMetadata} from 'read-pkg';
 
-export interface IOptions extends IFindUpOptions, IReadPkgOptions {}
+export interface Options extends FindUpOptions, ReadPkgOptions {}
 
 /** Returns a `Promise` for the result object. */
-declare function readPkgUp(options?: IOptions): Promise<IPackage>;
+declare function readPkgUp(options?: Options): Promise<PackageMetadata>;
 
 declare namespace readPkgUp {
 	/** Returns the result object. */
-	function sync(options?: IOptions): IPackage;
+	function sync(options?: Options): PackageMetadata;
 }
 
 export default readPkgUp;
