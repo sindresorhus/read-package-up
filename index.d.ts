@@ -1,30 +1,15 @@
-declare module 'read-pkg-up' {
-	interface IReadPkgUp {
-		(options?: IOptions): Promise<IPackage>;
+import { IOptions as IFindUpOptions } from 'find-up';
+import { IOptions as IReadPkgOptions, IPackage } from 'read-pkg';
+export { IPackage } from 'read-pkg';
 
-		sync (options?: IOptions): IPackage;
-	}
+export interface IOptions extends IFindUpOptions, IReadPkgOptions {}
 
-	interface IOptions {
-		/**
-		 * Directory to start looking for a package.json file.
-		 *
-		 * @default 'process.cwd()'
-		 */
-		cwd?: string;
-		/**
-		 * [Normalize](https://github.com/npm/normalize-package-data#what-normalization-currently-entails) the package data.
-		 *
-		 * @default true
-		 */
-		normalize?: boolean;
-	}
+/** Returns a `Promise` for the result object. */
+declare function readPkgUp(options?: IOptions): Promise<IPackage>;
 
-	interface IPackage {
-		[key: string]: any;
-	}
-
-	const read_pkg_up: IReadPkgUp;
-
-	export = read_pkg_up;
+declare namespace readPkgUp {
+	/** Returns the result object. */
+	function sync(options?: IOptions): IPackage;
 }
+
+export default readPkgUp;
