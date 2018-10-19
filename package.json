@@ -17,6 +17,7 @@
 	},
 	"files": [
 		"index.js",
+		"index.d.ts"
 	],
 	"keywords": [
 		"json",
