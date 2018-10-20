@@ -1,4 +1,5 @@
 'use strict';
+const path = require('path');
 const findUp = require('find-up');
 const readPkg = require('read-pkg');
 
@@ -8,7 +9,8 @@ module.exports = options => {
 			return {};
 		}
 
-		return readPkg(fp, options).then(pkg => ({pkg, path: fp}));
+		return readPkg({...options, cwd: path.dirname(fp)})
+			.then(pkg => ({pkg, path: fp}));
 	});
 };
 
@@ -20,7 +22,7 @@ module.exports.sync = options => {
 	}
 
 	return {
-		pkg: readPkg.sync(fp, options),
+		pkg: readPkg.sync({...options, cwd: path.dirname(fp)}),
 		path: fp
 	};
 };
