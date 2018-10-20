@@ -9,7 +9,7 @@ module.exports = options => {
 			return {};
 		}
 
-		return readPkg({...options, cwd: path.dirname(fp)})
+		return readPkg(Object.assign({}, options, {cwd: path.dirname(fp)}))
 			.then(pkg => ({pkg, path: fp}));
 	});
 };
@@ -22,7 +22,7 @@ module.exports.sync = options => {
 	}
 
 	return {
-		pkg: readPkg.sync({...options, cwd: path.dirname(fp)}),
+		pkg: readPkg.sync(Object.assign({}, options, {cwd: path.dirname(fp)})),
 		path: fp
 	};
 };
