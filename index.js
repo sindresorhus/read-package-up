@@ -3,26 +3,28 @@ const path = require('path');
 const findUp = require('find-up');
 const readPkg = require('read-pkg');
 
-module.exports = options => {
-	return findUp('package.json', options).then(fp => {
-		if (!fp) {
-			return {};
-		}
+module.exports = async options => {
+	const filePath = await findUp('package.json', options);
 
-		return readPkg(Object.assign({}, options, {cwd: path.dirname(fp)}))
-			.then(pkg => ({pkg, path: fp}));
-	});
-};
-
-module.exports.sync = options => {
-	const fp = findUp.sync('package.json', options);
-
-	if (!fp) {
+	if (!filePath) {
 		return {};
 	}
 
 	return {
-		pkg: readPkg.sync(Object.assign({}, options, {cwd: path.dirname(fp)})),
-		path: fp
+		pkg: await readPkg({...options, cwd: path.dirname(filePath)}),
+		path: filePath
+	};
+};
+
+module.exports.sync = options => {
+	const filePath = findUp.sync('package.json', options);
+
+	if (!filePath) {
+		return {};
+	}
+
+	return {
+		pkg: readPkg.sync({...options, cwd: path.dirname(filePath)}),
+		path: filePath
 	};
 };
