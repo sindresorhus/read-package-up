@@ -27,7 +27,6 @@
 		"fs",
 		"graceful",
 		"load",
-		"pkg",
 		"package",
 		"find",
 		"up",
@@ -42,19 +41,18 @@
 		"parents",
 		"folder",
 		"directory",
-		"dir",
 		"walk",
 		"walking",
 		"path"
 	],
 	"dependencies": {
-		"find-up": "^3.0.0",
+		"find-up": "^4.0.0",
 		"read-pkg": "^5.1.1",
-		"type-fest": "^0.4.1"
+		"type-fest": "^0.5.0"
 	},
 	"devDependencies": {
 		"ava": "^1.4.1",
-		"tsd": "^0.7.2",
+		"tsd": "^0.7.3",
 		"xo": "^0.24.0"
 	}
 }
