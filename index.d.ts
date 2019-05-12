@@ -1,5 +1,5 @@
 import {Omit} from 'type-fest';
-import * as readPkg from 'read-pkg';
+import readPkg require('read-pkg');
 
 declare namespace readPkgUp {
 	type Options = {
