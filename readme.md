@@ -28,7 +28,7 @@ const readPkgUp = require('read-pkg-up');
 	console.log(await readPkgUp());
 	/*
 	{
-		pkg: {
+		package: {
 			name: 'awesome-package',
 			version: '1.0.0',
 			…
@@ -44,15 +44,15 @@ const readPkgUp = require('read-pkg-up');
 
 ### readPkgUp([options])
 
-Returns a `Promise` for the result object.
+Returns a `Promise<object>` or `Promise<undefined>` if no `package.json` was found.
 
 ### readPkgUp.sync([options])
 
-Returns the result object.
+Returns the result object or `undefined` if no `package.json` was found.
 
 #### options
 
-Type: `Object`
+Type: `object`
 
 ##### cwd
 

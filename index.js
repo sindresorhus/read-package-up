@@ -7,11 +7,11 @@ module.exports = async options => {
 	const filePath = await findUp('package.json', options);
 
 	if (!filePath) {
-		return {};
+		return;
 	}
 
 	return {
-		pkg: await readPkg({...options, cwd: path.dirname(filePath)}),
+		package: await readPkg({...options, cwd: path.dirname(filePath)}),
 		path: filePath
 	};
 };
@@ -20,11 +20,11 @@ module.exports.sync = options => {
 	const filePath = findUp.sync('package.json', options);
 
 	if (!filePath) {
-		return {};
+		return;
 	}
 
 	return {
-		pkg: readPkg.sync({...options, cwd: path.dirname(filePath)}),
+		package: readPkg.sync({...options, cwd: path.dirname(filePath)}),
 		path: filePath
 	};
 };
