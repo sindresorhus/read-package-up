@@ -42,11 +42,11 @@ const readPkgUp = require('read-pkg-up');
 
 ## API
 
-### readPkgUp([options])
+### readPkgUp(options?)
 
 Returns a `Promise<object>` or `Promise<undefined>` if no `package.json` was found.
 
-### readPkgUp.sync([options])
+### readPkgUp.sync(options?)
 
 Returns the result object or `undefined` if no `package.json` was found.
 
@@ -77,6 +77,14 @@ Default: `true`
 - [pkg-conf](https://github.com/sindresorhus/pkg-conf) - Get namespaced config from the closest package.json
 
 
-## License
+---
 
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+<div align="center">
+	<b>
+		<a href="https://tidelift.com/subscription/pkg/npm-read-pkg-up?utm_source=npm-read-pkg-up&utm_medium=referral&utm_campaign=readme">Get professional support for this package with a Tidelift subscription</a>
+	</b>
+	<br>
+	<sub>
+		Tidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.
+	</sub>
+</div>
