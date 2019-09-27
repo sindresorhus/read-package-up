@@ -24,12 +24,12 @@ declare namespace readPkgUp {
 	type NormalizedPackageJson = readPkg.NormalizedPackageJson;
 
 	interface ReadResult {
-		package: PackageJson;
+		packageJson: PackageJson;
 		path: string;
 	}
 
 	interface NormalizedReadResult {
-		package: NormalizedPackageJson;
+		packageJson: NormalizedPackageJson;
 		path: string;
 	}
 }
@@ -45,7 +45,7 @@ declare const readPkgUp: {
 	(async () => {
 		console.log(await readPkgUp());
 		// {
-		// 	package: {
+		// 	packageJson: {
 		// 		name: 'awesome-package',
 		// 		version: '1.0.0',
 		// 		…
@@ -69,7 +69,7 @@ declare const readPkgUp: {
 
 	console.log(readPkgUp.sync());
 	// {
-	// 	package: {
+	// 	packageJson: {
 	// 		name: 'awesome-package',
 	// 		version: '1.0.0',
 	// 		…

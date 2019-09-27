@@ -28,7 +28,7 @@ const readPkgUp = require('read-pkg-up');
 	console.log(await readPkgUp());
 	/*
 	{
-		package: {
+		packageJson: {
 			name: 'awesome-package',
 			version: '1.0.0',
 			…
