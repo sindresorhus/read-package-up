@@ -1,4 +1,4 @@
-import {Omit} from 'type-fest';
+import {Except} from 'type-fest';
 import readPkg = require('read-pkg');
 
 declare namespace readPkgUp {
@@ -9,7 +9,7 @@ declare namespace readPkgUp {
 		@default process.cwd()
 		*/
 		cwd?: string;
-	} & Omit<readPkg.Options, 'cwd'>;
+	} & Except<readPkg.Options, 'cwd'>;
 
 	type NormalizeOptions = {
 		/**
@@ -18,7 +18,7 @@ declare namespace readPkgUp {
 		@default process.cwd()
 		*/
 		cwd?: string;
-	} & Omit<readPkg.NormalizeOptions, 'cwd'>;
+	} & Except<readPkg.NormalizeOptions, 'cwd'>;
 
 	type PackageJson = readPkg.PackageJson;
 	type NormalizedPackageJson = readPkg.NormalizedPackageJson;
