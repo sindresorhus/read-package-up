@@ -4,6 +4,7 @@
 	"description": "Read the closest package.json file",
 	"license": "MIT",
 	"repository": "sindresorhus/read-pkg-up",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
