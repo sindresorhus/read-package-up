@@ -1,4 +1,4 @@
-# read-pkg-up [![Build Status](https://travis-ci.org/sindresorhus/read-pkg-up.svg?branch=master)](https://travis-ci.org/sindresorhus/read-pkg-up)
+# read-pkg-up
 
 > Read the closest package.json file
 
