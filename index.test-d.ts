@@ -1,36 +1,36 @@
 import {expectType, expectError} from 'tsd';
-import readPkgUp = require('.');
+import {readPackageUpAsync, readPackageUpSync, ReadResult, NormalizedReadResult} from './index.js';
 
-expectType<Promise<readPkgUp.NormalizedReadResult | undefined>>(readPkgUp());
-expectType<Promise<readPkgUp.NormalizedReadResult | undefined>>(
-	readPkgUp({cwd: '.'})
+expectType<Promise<NormalizedReadResult | undefined>>(readPackageUpAsync());
+expectType<Promise<NormalizedReadResult | undefined>>(
+	readPackageUpAsync({cwd: '.'})
 );
-expectType<Promise<readPkgUp.NormalizedReadResult | undefined>>(
-	readPkgUp({normalize: true})
+expectType<Promise<NormalizedReadResult | undefined>>(
+	readPackageUpAsync({normalize: true})
 );
-expectType<Promise<readPkgUp.NormalizedReadResult | undefined>>(
-	readPkgUp({cwd: '.', normalize: true})
+expectType<Promise<NormalizedReadResult | undefined>>(
+	readPackageUpAsync({cwd: '.', normalize: true})
 );
-expectType<Promise<readPkgUp.ReadResult | undefined>>(
-	readPkgUp({normalize: false})
+expectType<Promise<ReadResult | undefined>>(
+	readPackageUpAsync({normalize: false})
 );
-expectError<Promise<readPkgUp.NormalizedReadResult | undefined>>(
-	readPkgUp({normalize: false})
+expectError<Promise<NormalizedReadResult | undefined>>(
+	readPackageUpAsync({normalize: false})
 );
 
-expectType<readPkgUp.NormalizedReadResult | undefined>(readPkgUp.sync());
-expectType<readPkgUp.NormalizedReadResult | undefined>(
-	readPkgUp.sync({cwd: '.'})
+expectType<NormalizedReadResult | undefined>(readPackageUpSync());
+expectType<NormalizedReadResult | undefined>(
+	readPackageUpSync({cwd: '.'})
 );
-expectType<readPkgUp.NormalizedReadResult | undefined>(
-	readPkgUp.sync({normalize: true})
+expectType<NormalizedReadResult | undefined>(
+	readPackageUpSync({normalize: true})
 );
-expectType<readPkgUp.NormalizedReadResult | undefined>(
-	readPkgUp.sync({cwd: '.', normalize: true})
+expectType<NormalizedReadResult | undefined>(
+	readPackageUpSync({cwd: '.', normalize: true})
 );
-expectType<readPkgUp.ReadResult | undefined>(
-	readPkgUp.sync({normalize: false})
+expectType<ReadResult | undefined>(
+	readPackageUpSync({normalize: false})
 );
-expectError<readPkgUp.NormalizedReadResult | undefined>(
-	readPkgUp.sync({normalize: false})
+expectError<NormalizedReadResult | undefined>(
+	readPackageUpSync({normalize: false})
 );
