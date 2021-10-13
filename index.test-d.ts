@@ -1,36 +1,36 @@
 import {expectType, expectError} from 'tsd';
-import {readPackageUpAsync, readPackageUpSync, ReadResult, NormalizedReadResult} from './index.js';
+import {readPackageUp, readPackageUpSync, ReadResult, NormalizedReadResult} from './index.js';
 
-expectType<Promise<NormalizedReadResult | undefined>>(readPackageUpAsync());
+expectType<Promise<NormalizedReadResult | undefined>>(readPackageUp());
 expectType<Promise<NormalizedReadResult | undefined>>(
-	readPackageUpAsync({cwd: '.'})
+	readPackageUp({cwd: '.'}),
 );
 expectType<Promise<NormalizedReadResult | undefined>>(
-	readPackageUpAsync({normalize: true})
+	readPackageUp({normalize: true}),
 );
 expectType<Promise<NormalizedReadResult | undefined>>(
-	readPackageUpAsync({cwd: '.', normalize: true})
+	readPackageUp({cwd: '.', normalize: true}),
 );
 expectType<Promise<ReadResult | undefined>>(
-	readPackageUpAsync({normalize: false})
+	readPackageUp({normalize: false}),
 );
 expectError<Promise<NormalizedReadResult | undefined>>(
-	readPackageUpAsync({normalize: false})
+	readPackageUp({normalize: false}),
 );
 
 expectType<NormalizedReadResult | undefined>(readPackageUpSync());
 expectType<NormalizedReadResult | undefined>(
-	readPackageUpSync({cwd: '.'})
+	readPackageUpSync({cwd: '.'}),
 );
 expectType<NormalizedReadResult | undefined>(
-	readPackageUpSync({normalize: true})
+	readPackageUpSync({normalize: true}),
 );
 expectType<NormalizedReadResult | undefined>(
-	readPackageUpSync({cwd: '.', normalize: true})
+	readPackageUpSync({cwd: '.', normalize: true}),
 );
 expectType<ReadResult | undefined>(
-	readPackageUpSync({normalize: false})
+	readPackageUpSync({normalize: false}),
 );
 expectError<NormalizedReadResult | undefined>(
-	readPackageUpSync({normalize: false})
+	readPackageUpSync({normalize: false}),
 );

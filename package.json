@@ -13,7 +13,7 @@
 	"type": "module",
 	"exports": "./index.js",
 	"engines": {
-		"node": ">=12"
+		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -49,13 +49,13 @@
 		"path"
 	],
 	"dependencies": {
-		"find-up": "^5.0.0",
-		"read-pkg": "^6.0.0",
-		"type-fest": "^1.0.1"
+		"find-up": "^6.2.0",
+		"read-pkg": "^7.0.0",
+		"type-fest": "^2.5.0"
 	},
 	"devDependencies": {
 		"ava": "^3.15.0",
-		"tsd": "^0.14.0",
-		"xo": "^0.38.2"
+		"tsd": "^0.18.0",
+		"xo": "^0.45.0"
 	}
 }

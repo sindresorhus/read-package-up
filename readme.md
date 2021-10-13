@@ -10,16 +10,16 @@
 
 ## Install
 
-```
-$ npm install read-pkg-up
+```sh
+npm install read-pkg-up
 ```
 
 ## Usage
 
 ```js
-import {readPackageUpAsync} from 'read-pkg-up';
+import {readPackageUp} from 'read-pkg-up';
 
-console.log(await readPackageUpAsync());
+console.log(await readPackageUp());
 /*
 {
 	packageJson: {
@@ -34,7 +34,7 @@ console.log(await readPackageUpAsync());
 
 ## API
 
-### readPackageUpAsync(options?)
+### readPackageUp(options?)
 
 Returns a `Promise<object>` or `Promise<undefined>` if no `package.json` was found.
 
@@ -51,7 +51,7 @@ Type: `object`
 Type: `string`\
 Default: `process.cwd()`
 
-Directory to start looking for a package.json file.
+The directory to start looking for a package.json file.
 
 ##### normalize
 

@@ -1,9 +1,9 @@
 import {Except} from 'type-fest';
-import {readPackageAsync, readPackageSync, Options as ReadPackageOptions, NormalizeOptions as ReadPackageNormalizeOptions, PackageJson, NormalizedPackageJson} from 'read-pkg';
+import {readPackage, readPackageSync, Options as ReadPackageOptions, NormalizeOptions as ReadPackageNormalizeOptions, PackageJson, NormalizedPackageJson} from 'read-pkg';
 
 export type Options = {
 	/**
-	Directory to start looking for a package.json file.
+	The directory to start looking for a package.json file.
 
 	@default process.cwd()
 	*/
@@ -12,7 +12,7 @@ export type Options = {
 
 export type NormalizeOptions = {
 	/**
-	Directory to start looking for a package.json file.
+	The directory to start looking for a package.json file.
 
 	@default process.cwd()
 	*/
@@ -31,7 +31,7 @@ export interface NormalizedReadResult {
 
 export {
 	PackageJson,
-	NormalizedPackageJson
+	NormalizedPackageJson,
 };
 
 /**
@@ -39,9 +39,9 @@ Read the closest `package.json` file.
 
 @example
 ```
-import {readPackageUpAsync} from 'read-pkg-up';
+import {readPackageUp} from 'read-pkg-up';
 
-console.log(await readPackageUpAsync());
+console.log(await readPackageUp());
 // {
 // 	packageJson: {
 // 		name: 'awesome-package',
@@ -52,8 +52,8 @@ console.log(await readPackageUpAsync());
 // }
 ```
 */
-export function readPackageUpAsync(options?: NormalizeOptions): Promise<NormalizedReadResult | undefined>;
-export function readPackageUpAsync(options: Options): Promise<ReadResult | undefined>;
+export function readPackageUp(options?: NormalizeOptions): Promise<NormalizedReadResult | undefined>;
+export function readPackageUp(options: Options): Promise<ReadResult | undefined>;
 
 /**
 Synchronously read the closest `package.json` file.
