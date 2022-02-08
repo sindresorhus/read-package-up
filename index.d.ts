@@ -7,7 +7,7 @@ export type Options = {
 
 	@default process.cwd()
 	*/
-	cwd?: string;
+	cwd?: URL | string;
 } & Except<ReadPackageOptions, 'cwd'>;
 
 export type NormalizeOptions = {
@@ -16,7 +16,7 @@ export type NormalizeOptions = {
 
 	@default process.cwd()
 	*/
-	cwd?: string;
+	cwd?: URL | string;
 } & Except<ReadPackageNormalizeOptions, 'cwd'>;
 
 export interface ReadResult {
