@@ -9,6 +9,10 @@ test('async', async t => {
 	const result = await readPackageUp({cwd});
 	t.is(result.packageJson.name, 'read-pkg-up');
 	t.is(result.path, packagePath);
+	t.deepEqual(
+		await readPackageUp({cwd: new URL(cwd, import.meta.url)}),
+		result,
+	);
 
 	t.is(await readPackageUp({cwd: '/'}), undefined);
 });
@@ -17,6 +21,10 @@ test('sync', t => {
 	const result = readPackageUpSync({cwd});
 	t.is(result.packageJson.name, 'read-pkg-up');
 	t.is(result.path, packagePath);
+	t.deepEqual(
+		readPackageUpSync({cwd: new URL(cwd, import.meta.url)}),
+		result,
+	);
 
 	t.is(readPackageUpSync({cwd: '/'}), undefined);
 });

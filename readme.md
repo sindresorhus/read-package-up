@@ -48,7 +48,7 @@ Type: `object`
 
 ##### cwd
 
-Type: `string`\
+Type: `URL | string`\
 Default: `process.cwd()`
 
 The directory to start looking for a package.json file.
