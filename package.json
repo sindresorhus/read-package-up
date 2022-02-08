@@ -49,8 +49,8 @@
 		"path"
 	],
 	"dependencies": {
-		"find-up": "^6.2.0",
-		"read-pkg": "^7.0.0",
+		"find-up": "^6.3.0",
+		"read-pkg": "^7.1.0",
 		"type-fest": "^2.5.0"
 	},
 	"devDependencies": {
