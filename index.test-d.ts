@@ -1,5 +1,5 @@
 import {expectType, expectError} from 'tsd';
-import {readPackageUp, readPackageUpSync, ReadResult, NormalizedReadResult} from './index.js';
+import {readPackageUp, readPackageUpSync, type ReadResult, type NormalizedReadResult} from './index.js';
 
 expectType<Promise<NormalizedReadResult | undefined>>(readPackageUp());
 expectType<Promise<NormalizedReadResult | undefined>>(

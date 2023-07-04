@@ -1,5 +1,5 @@
-import {Except} from 'type-fest';
-import {readPackage, readPackageSync, Options as ReadPackageOptions, NormalizeOptions as ReadPackageNormalizeOptions, PackageJson, NormalizedPackageJson} from 'read-pkg';
+import {type Except} from 'type-fest';
+import {readPackage, readPackageSync, type Options as ReadPackageOptions, type NormalizeOptions as ReadPackageNormalizeOptions, type PackageJson, type NormalizedPackageJson} from 'read-pkg';
 
 export type Options = {
 	/**
@@ -19,19 +19,14 @@ export type NormalizeOptions = {
 	cwd?: URL | string;
 } & Except<ReadPackageNormalizeOptions, 'cwd'>;
 
-export interface ReadResult {
+export type ReadResult = {
 	packageJson: PackageJson;
 	path: string;
-}
+};
 
-export interface NormalizedReadResult {
+export type NormalizedReadResult = {
 	packageJson: NormalizedPackageJson;
 	path: string;
-}
-
-export {
-	PackageJson,
-	NormalizedPackageJson,
 };
 
 /**
@@ -75,3 +70,5 @@ console.log(readPackageUpSync());
 */
 export function readPackageUpSync(options?: NormalizeOptions): NormalizedReadResult | undefined;
 export function readPackageUpSync(options: Options): ReadResult | undefined;
+
+export {PackageJson, NormalizedPackageJson} from 'read-pkg';
