@@ -16,7 +16,7 @@
 		"default": "./index.js"
 	},
 	"engines": {
-		"node": ">=16"
+		"node": ">=18"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -52,13 +52,13 @@
 		"path"
 	],
 	"dependencies": {
-		"find-up": "^6.3.0",
-		"read-pkg": "^8.1.0",
-		"type-fest": "^4.2.0"
+		"find-up-simple": "^1.0.0",
+		"read-pkg": "^9.0.0",
+		"type-fest": "^4.6.0"
 	},
 	"devDependencies": {
 		"ava": "^5.3.1",
-		"tsd": "^0.28.1",
+		"tsd": "^0.29.0",
 		"xo": "^0.56.0"
 	},
 	"xo": {

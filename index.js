@@ -1,5 +1,5 @@
 import path from 'node:path';
-import {findUp, findUpSync} from 'find-up';
+import {findUp, findUpSync} from 'find-up-simple';
 import {readPackage, readPackageSync} from 'read-pkg';
 
 export async function readPackageUp(options) {

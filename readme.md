@@ -36,11 +36,11 @@ console.log(await readPackageUp());
 
 ### readPackageUp(options?)
 
-Returns a `Promise<object>` or `Promise<undefined>` if no `package.json` was found.
+Returns a `Promise<object>`, or `Promise<undefined>` if no `package.json` was found.
 
 ### readPackageUpSync(options?)
 
-Returns the result object or `undefined` if no `package.json` was found.
+Returns the result object, or `undefined` if no `package.json` was found.
 
 #### options
 
