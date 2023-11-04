@@ -7,7 +7,7 @@ const packagePath = path.resolve('.', 'package.json');
 
 test('async', async t => {
 	const result = await readPackageUp({cwd});
-	t.is(result.packageJson.name, 'read-pkg-up');
+	t.is(result.packageJson.name, 'read-package-up');
 	t.is(result.path, packagePath);
 	t.deepEqual(
 		await readPackageUp({cwd: new URL(cwd, import.meta.url)}),
@@ -19,7 +19,7 @@ test('async', async t => {
 
 test('sync', t => {
 	const result = readPackageUpSync({cwd});
-	t.is(result.packageJson.name, 'read-pkg-up');
+	t.is(result.packageJson.name, 'read-package-up');
 	t.is(result.path, packagePath);
 	t.deepEqual(
 		readPackageUpSync({cwd: new URL(cwd, import.meta.url)}),

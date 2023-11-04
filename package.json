@@ -1,9 +1,9 @@
 {
-	"name": "read-pkg-up",
+	"name": "read-package-up",
 	"version": "10.1.0",
 	"description": "Read the closest package.json file",
 	"license": "MIT",
-	"repository": "sindresorhus/read-pkg-up",
+	"repository": "sindresorhus/read-package-up",
 	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",

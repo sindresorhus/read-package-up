@@ -1,5 +1,12 @@
 import {type Except} from 'type-fest';
-import {readPackage, readPackageSync, type Options as ReadPackageOptions, type NormalizeOptions as ReadPackageNormalizeOptions, type PackageJson, type NormalizedPackageJson} from 'read-pkg';
+import {
+	readPackage,
+	readPackageSync,
+	type Options as ReadPackageOptions,
+	type NormalizeOptions as ReadPackageNormalizeOptions,
+	type PackageJson,
+	type NormalizedPackageJson,
+} from 'read-pkg';
 
 export type Options = {
 	/**
@@ -34,7 +41,7 @@ Read the closest `package.json` file.
 
 @example
 ```
-import {readPackageUp} from 'read-pkg-up';
+import {readPackageUp} from 'read-package-up';
 
 console.log(await readPackageUp());
 // {
@@ -55,7 +62,7 @@ Synchronously read the closest `package.json` file.
 
 @example
 ```
-import {readPackageUpSync} from 'read-pkg-up';
+import {readPackageUpSync} from 'read-package-up';
 
 console.log(readPackageUpSync());
 // {
