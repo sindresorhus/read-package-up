@@ -65,4 +65,4 @@ Default: `true`
 - [read-pkg](https://github.com/sindresorhus/read-pkg) - Read a package.json file
 - [package-up](https://github.com/sindresorhus/package-up) - Find the closest package.json file
 - [find-up](https://github.com/sindresorhus/find-up) - Find a file by walking up parent directories
-- [pkg-conf](https://github.com/sindresorhus/pkg-conf) - Get namespaced config from the closest package.json
+- [package-config](https://github.com/sindresorhus/package-config) - Get namespaced config from the closest package.json

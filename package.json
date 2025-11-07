@@ -15,11 +15,12 @@
 		"types": "./index.d.ts",
 		"default": "./index.js"
 	},
+	"sideEffects": false,
 	"engines": {
-		"node": ">=18"
+		"node": ">=20"
 	},
 	"scripts": {
-		"test": "xo && ava && tsd"
+		"test": "xo && ava"
 	},
 	"files": [
 		"index.js",
@@ -52,18 +53,12 @@
 		"path"
 	],
 	"dependencies": {
-		"find-up-simple": "^1.0.0",
-		"read-pkg": "^9.0.0",
-		"type-fest": "^4.6.0"
+		"find-up-simple": "^1.0.1",
+		"read-pkg": "^10.0.0",
+		"type-fest": "^5.2.0"
 	},
 	"devDependencies": {
-		"ava": "^5.3.1",
-		"tsd": "^0.29.0",
-		"xo": "^0.56.0"
-	},
-	"xo": {
-		"rules": {
-			"@typescript-eslint/no-redundant-type-constituents": "off"
-		}
+		"ava": "^6.4.1",
+		"xo": "^1.2.3"
 	}
 }
